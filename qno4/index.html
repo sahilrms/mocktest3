@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Navbar</title>
+  <style>
+    /* Basic styles */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    .navbar {
+      background-color: #4444;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .navbar-brand {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .navbar-items {
+      display: flex;
+    }
+    .navbar-item {
+      margin-right: 10px;
+    }
+    .navbar-item a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Hamburger menu styles */
+    .navbar-toggle {
+      display: none;
+      cursor: pointer;
+      font-size: 24px;
+    }
+    .navbar-menu {
+      display: none;
+      flex-direction: column;
+      background-color: #555;
+      padding: 10px;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+    }
+    .navbar-menu.show {
+      display: flex;
+    }
+    .navbar-menu-item {
+      margin-bottom: 10px;
+    }
+
+    /* Media queries */
+    @media screen and (max-width: 768px) {
+      .navbar-items {
+        display: none;
+      }
+      .navbar-toggle {
+        display: block;
+      }
+      .navbar-menu.show {
+        display: block;
+      }
+      .navbar-menu-item {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      .navbar-menu {
+        display: flex;
+        position: static;
+        background-color: transparent;
+      }
+      .navbar-toggle {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-brand">Logo</div>
+    <div class="navbar-toggle" id="navbar-toggle" onclick="toggleNavbarMenu()">
+      <div style="width: 50px; height: 4px; background: #000;"></div>
+      <div style="margin-top: 4px; width: 50px; height: 4px; background: #000;"></div>
+      <div style="margin-top: 4px; width: 50px; height: 4px; background: #000;"></div>
+    </div>
+    <div class="navbar-items" id="navbarItems">
+      <div class="navbar-item"><a href="#">Home</a></div>
+      <div class="navbar-item"><a href="#">About</a></div>
+      <div class="navbar-item"><a href="#">Services</a></div>
+      <div class="navbar-item"><a href="#">Contact</a></div>
+    </div>
+    <div class="navbar-menu" id="navbarMenu">
+      <div class="navbar-menu-item"><a href="#">Home</a></div>
+      <div class="navbar-menu-item"><a href="#">About</a></div>
+      <div class="navbar-menu-item"><a href="#">Services</a></div>
+      <div class="navbar-menu-item"><a href="#">Contact</a></div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

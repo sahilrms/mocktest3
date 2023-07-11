@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Box App</title>
+  <style>
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .input-container {
+      display: flex;
+    }
+    .input-container input {
+      flex-grow: 1;
+      margin-right: 10px;
+    }
+    .items-container {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="input-container">
+      <input type="text" id="inputField" placeholder="Enter your text">
+      <button id="submitButton">Submit</button>
+    </div>
+    <div class="items-container" id="itemsContainer"></div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>

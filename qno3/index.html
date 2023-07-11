@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Data with Skeleton Loader</title>
+  <style>
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .skeleton {
+      background-color: #f5f5f5;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      animation: pulse 1.5s infinite;
+    }
+    .skeleton-small {
+      height: 12px;
+      width: 80%;
+    }
+    .skeleton-medium {
+      height: 16px;
+      width: 60%;
+    }
+    .skeleton-large {
+      height: 20px;
+      width: 40%;
+    }
+    @keyframes pulse {
+      0% {
+        opacity: 0.6;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0.6;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>API Data</h1>
+    <div id="dataContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
